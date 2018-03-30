@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pitch</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Pitch">
+  <meta name="author" content="Roland Kargl">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/solarized_light.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Pitch</h1>
+    <h2>Baseball Players Salaries</h2>
+    <p>Roland Kargl<br/>March 2018</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>The Data</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The Hitters Data from the ISLR package contains Major League Baseball Data from the 1986 and 1987 seasons.<br>
+It contains Salary information which the provided Application is trying to predict.</p>
+
+<p>Target Variable</p>
+
+<ul>
+<li>Salary: 1987 annual salary on opening day in thousands of dollars</li>
+</ul>
+
+<p>Predictors</p>
+
+<ul>
+<li>Hits: Number of hits in 1986</li>
+<li>Years: Number of years in the major leagues</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Data Points</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The following plot shows an overview of the available Data Points used for the predicition.<br>
+It shows the realtionship of Hits to Salaries. Years of experience are coloured.</p>
+
+<p><img src="assets/fig/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>The Application</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>To use the application choose the application tab and select the parameters with the sliders on the left hand side.<br>
+Press the Submit button to provide the application with the selected data.</li>
+<li>The plot shows the relation of Hits with annual salaries as given in the data set.<br>
+Coloring of the points hints at the years of experience of the player associated with the data point.</li>
+<li>The green line shows the linear relationship between Hits and Salary.</li>
+<li>The actual predicition also takes into account the years of experience and is shown below the plot.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Prediction Details</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The following linear model is used to make salary predictions</p>
+
+<pre><code class="r">
+  modfit &lt;- lm(Salary ~ Years + Hits, data = Hitters)
+
+</code></pre>
+
+<p>After hiting the Submut button the predicted Salary is shown in thousands of Dollars. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='The Data'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Data Points'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='The Application'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Prediction Details'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
